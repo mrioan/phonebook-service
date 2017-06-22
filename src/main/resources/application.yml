@@ -1,0 +1,58 @@
+# Spring properties
+spring:
+  application:
+    name: phonebook-service
+
+# HTTP Server
+server:
+  port: 8080   # HTTP (Tomcat) port
+
+phonebook:
+  security:
+    oauth2:
+      token:
+        ttl: 3600
+      # openssl genrsa -out jwt.pem 2048
+      # openssl rsa -in jwt.pem
+      privateKey: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEowIBAAKCAQEAvM2P7szv2gfB0YmWdDcc/gUb03vu30rJDYdE3Z6W1Zkst4tE
+        einFXiBoyyC56nX8EzASh3LUoN2qrTeFCoQNPPQzzgWQW1ixGAXvHXVPRKcp5Z1+
+        Yatug13ECuS+sQV/40CS1vOljJ88xk+WFEzpkPF/WqELv2bjXlejNy/x5RHX5FD/
+        xwMYZSPe7Wh7knse++o4nHQ1lwNTEB5aGek1fUSd5dYuFPz9GfDpShebd7etGXYJ
+        M628FNNO9REdQlrIJOG4dt0Y+3QHQRpWJMXa8qFlFP8IAU0SJsfkTpM2jshPvlRC
+        +BCMRffwR/pUYtKKh7UWvTNOKu2CzQyBuqOHaQIDAQABAoIBAHbsA/0mmO18dVjG
+        kT4ieOCH1z8ekReUw48B5R6zBc8E7GWwEzHfnbHsOBW6R2CncF+lqAYpDkVFWnxA
+        vEwjYTNDnl3mo0bmVqYLFtI3UfasVHeM/E4I7VNRfGpgKrzV+ffqdJNwZJZutpkz
+        CBVBXN0vQEiVqBCnfg+uo9/fEz51KOSQAkHXpJWwaCZiucsbFPWTLBCuKLUXAX8X
+        1CKkevc5NzmA06I5EzpNjnfzoVFDoch/9JPqbhmnIMmRwmJTrDD0L65eVNTwqBfE
+        nGO4y1ylATjXVx6aFXx/XVkDDtz126K9cBP9hytI2OIOsvmWU+QfZK7YfklwVOzL
+        g64o9AECgYEA7pjo5Ayov6xWTR6/FyLRIqcXjKtu0pLMjnKcPVuBtWKPesEbIS4E
+        UXAeAmPvS2dXIHTlTxTPue25ruOB7f/T4bn3cQe4wX4CrMT740MyouioOGBreiDX
+        G8dQuy4USA5OfZmyX0LydW3yaK8yHJ63fqXAoRuz8OrRh8nAcF9JWy0CgYEAypLk
+        fnH05iI/fjfFxP7QrtUrXlLkfDMMwU2TD0iSLpF0J5d73Kj57TriuTizEh4KGw3u
+        adLd/vPEuSsLVwYPvYIhpH29hmcusVqAjmn6Hua/CsiqebKDIknnUqZyYWdxIo+j
+        wdzr6Vge58b5TYtKlzqK1GbGIRuzzfuODKIe0q0CgYA3irDsJWZC+EM+wKGLKTe1
+        8V+yB1ZM/o9Pua5VOi//oWn1EW7XUnb+3jKeK9VQoEXP8GZQ+m9AwO4woBVm6d7Q
+        9RF85mdD46mLvm9EgCgRdEd0mD1suKhadxN7/0YJYAs1gcncEyGN5IJBjEcGEox0
+        lvE4j9Jbis4r5fM+NXBGIQKBgQCokq60jo42iF9/4FeihE4Sf3AUkTR0KmM95Rkw
+        ybpkKESZwdSgHrnEcZFEg2t48yiDtQcmZwS36hFV6f0I0RF+KXFnmf+CfhD8I40B
+        di1fU7O8/JnopeW8PfXS8JIUfmlGUnP6mqZyyxME266Qmg5bZKss782Gta/eBK0D
+        1FGEDQKBgGcIFXFN6aOE6ZPAf9ncxIUBtqJi8g1xpl0gBLfVgsSPqxkQoPjA/U72
+        gbQrqU2twWLE4RYE/7J2sX3yshTi/PldBKknftSigreeblCMzXsPtvXHtAyxlf3m
+        0ZdkIAS9OVN6CwcdY0USBAH/Uwzon/D/xlLRACUSe90o5ifBg6up
+        -----END RSA PRIVATE KEY-----
+      # openssl rsa -in jwt.pem -pubout
+      publicKey: |
+        -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvM2P7szv2gfB0YmWdDcc
+        /gUb03vu30rJDYdE3Z6W1Zkst4tEeinFXiBoyyC56nX8EzASh3LUoN2qrTeFCoQN
+        PPQzzgWQW1ixGAXvHXVPRKcp5Z1+Yatug13ECuS+sQV/40CS1vOljJ88xk+WFEzp
+        kPF/WqELv2bjXlejNy/x5RHX5FD/xwMYZSPe7Wh7knse++o4nHQ1lwNTEB5aGek1
+        fUSd5dYuFPz9GfDpShebd7etGXYJM628FNNO9REdQlrIJOG4dt0Y+3QHQRpWJMXa
+        8qFlFP8IAU0SJsfkTpM2jshPvlRC+BCMRffwR/pUYtKKh7UWvTNOKu2CzQyBuqOH
+        aQIDAQAB
+        -----END PUBLIC KEY-----
+    client:
+      clientid: trusted-app
+      secret: secret
